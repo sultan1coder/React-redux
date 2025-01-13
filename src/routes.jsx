@@ -3,6 +3,8 @@ import Homepage from './pages/Homepage';
 import MainRouter from './pages/MainPage';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import Posts from './pages/Posts';
+import NotFound from './pages/NotFound';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <ContactUs />
+      },
+      {
+        path: '/posts',
+        element: <Posts />
+      },
+      {
+        path: '*',
+        element: <NotFound />
       }
     ]
   }
