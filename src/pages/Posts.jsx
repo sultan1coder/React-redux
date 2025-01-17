@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPosts } from '../redux/slices/postsSlice';
+import { Link } from 'react-router-dom';
 import Spinner from '../components/Spinner';
 
 const Posts = () => {
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getPosts())
+  }, [])
   const postsState = useSelector((state) => state.myPosts);
 
-  useEffect(() => {
-    dispatch(getPosts());
-  }, []);
 
-  if (postsState.loading) {
+  if (postsState.loading === true) {
     return (
       <div className='flex items-center justify-center'>
         <Spinner />
@@ -24,15 +25,20 @@ const Posts = () => {
   }
 
   return (
-    <div className='grid grid-cols-1 gap-4 p-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-      {postsState.posts.map((post) => (
-        <div className='p-3 transition-all border rounded-md shadow-sm cursor-pointer hover:bg-black hover:text-white'>
-          <h1 className='text-xl font-bold'>{post.title}</h1>
-          <p className='my-3 text-sm'>{post.body}</p>
-        </div>
-      ))}
+    <div className="p-1 duration-500 lg:p-4 ">
+      <h1 className="text-3xl font-bold text-center text-[#ff5630]">Posts</h1>
+      <div className="grid grid-cols-1 gap-8 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+        {postsState.posts?.map((post) => (
+          <Link to={`/post/${post.id}`} key={post.id} className="p-8 transition-all duration-500 bg-slate-200 rounded-xl hover:bg-slate-50 hover:scale-105">
+            <h1 className="text-xl font-semibold text-left">{post.title}</h1>
+            <p>{post.body}</p>
+          </Link>
+        ))}
+
+      </div>
     </div>
-  );
+  )
 };
 
 export default Posts;

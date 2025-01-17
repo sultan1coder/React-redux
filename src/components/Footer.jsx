@@ -69,7 +69,7 @@ const Footer = () => {
               </li>
               <li className='text-gray-400'>Phone: +123 456 7890</li>
               <li className='text-gray-400'>
-                Address: 123 Main St, Hargeisa, Somaliland
+                Address: Hargeisa, Somaliland
               </li>
             </ul>
           </div>

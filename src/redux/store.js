@@ -5,7 +5,8 @@ import { postsSlice } from './slices/postsSlice';
 const store = configureStore({
   reducer: {
     myTodos: todoSlice.reducer,
-    myPosts: postsSlice.reducer
+    myPosts: postsSlice.reducer,
+    myComments: commentsSlice.reducer
   }
 });
 
