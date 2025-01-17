@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { data } from 'react-router-dom';
 
 const initialState = {
   posts: [],
@@ -11,10 +10,9 @@ const initialState = {
 // GET THE DATA FROM THE API
 export const getPosts = createAsyncThunk(
   'posts/list',
-  async (data, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
       const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
-      console.log(res.data);
       return res.data;
     } catch (error) {
       return rejectWithValue(

@@ -5,6 +5,7 @@ import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Posts from './pages/Posts';
 import NotFound from './pages/NotFound';
+import Post from './pages/post';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/posts',
         element: <Posts />
+      },
+      {
+        path: '/post/:id',
+        element: <Post />
       },
       {
         path: '*',

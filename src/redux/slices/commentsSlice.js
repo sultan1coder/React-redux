@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { data } from "react-router-dom";
 
 const initialState = {
     loading: false,
@@ -10,7 +9,7 @@ const initialState = {
 };
 
 
-export const getComments = createAsyncThunk("Comments/List", async (data, { rejectWithValue }) => {
+export const getComments = createAsyncThunk("Comments/List", async (_, { rejectWithValue }) => {
     try {
         const response = await axios.get("https://jsonplaceholder.typicode.com/comments");
         return response.data;

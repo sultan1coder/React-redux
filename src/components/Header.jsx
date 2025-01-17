@@ -5,10 +5,10 @@ const Header = () => {
   return (
     <div className='flex items-center justify-around p-3'>
       <div className='logo'>
-        <h1 className='text-xl font-bold'>Tiigsi Pages</h1>
+        <h1 className='text-xl font-bold'>Tiigsi Technology</h1>
       </div>
 
-      <div className='flex items-center gap-3 menus'>
+      <div className='flex items-center gap-3 font-semibold menus'>
         <Link to='/'>Home</Link>
         <Link to='/about'>About</Link>
         <Link to='/contact'>Contact us</Link>
