@@ -2,15 +2,15 @@ import React from 'react'
 
 const TodoItem = ({ todoItem, editHandler, deleteHandler }) => {
     return (
-        <div className='todoItem border my-3 rounded-md p-3 flex justify-between items-center'>
+        <div className='flex items-center justify-between p-3 my-3 border rounded-md todoItem'>
             <div className=''>
                 <h1 className='text-xl font-bold'>{todoItem.title}</h1>
                 <p className='text-sm'>{todoItem.description}</p>
                 <p className=''>STATUS : {todoItem.status}</p>
             </div>
-            <div className='buttons flex gap-2'>
-                <button className='px-4 py-2 bg-green-600 hover:bg-green-500 rounded-md text-white transition' onClick={() => editHandler(todoItem)}>Edit</button>
-                <button className='px-4 py-2 bg-red-600 hover:bg-red-500 rounded-md text-white transition' onClick={() => deleteHandler(todoItem)}>Delete</button>
+            <div className='flex gap-2 buttons'>
+                <button className='px-4 py-2 text-white transition bg-green-600 rounded-md hover:bg-green-500' onClick={() => editHandler(todoItem)}>Edit</button>
+                <button className='px-4 py-2 text-white transition bg-red-600 rounded-md hover:bg-red-500' onClick={() => deleteHandler(todoItem)}>Delete</button>
             </div>
         </div>
     )

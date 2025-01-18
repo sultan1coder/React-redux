@@ -23,7 +23,7 @@ const TodosList = ({ editHandler }) => {
           deleteHandler={() => deleteHandler(todoItem.id)}
         />
       ))) : (
-        <div className='text-gray-400 text-center mt-8 text-xl'>Enter valid todo!</div>
+        <div className='mt-8 text-xl text-center text-gray-400'>Enter valid todo!</div>
       )
       }
     </div>

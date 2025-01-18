@@ -30,7 +30,7 @@ const Posts = () => {
       <div className="grid grid-cols-1 gap-8 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
         {postsState.posts?.map((post) => (
-          <Link to={`/post/${post.id}`} key={post.id} className="p-8 transition-all duration-500 bg-slate-200 rounded-xl hover:bg-slate-50 hover:scale-105">
+          <Link to={`/post/${post.id}`} key={post.id} className="p-8 font-normal text-white transition-all bg-gray-500 duration-600 rounded-xl hover:bg-slate-200 hover:scale-105 hover:text-black">
             <h1 className="text-xl font-semibold text-left">{post.title}</h1>
             <p>{post.body}</p>
           </Link>
