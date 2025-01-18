@@ -14,7 +14,7 @@ const Header = () => {
         <Link to='/contact'>Contact us</Link>
         <button className='px-4 py-1 text-white bg-blue-700 rounded-md hover:bg-blue-600'><Link to='/posts'>Posts</Link></button>
         
-        <button className='px-4 py-2 text-white bg-blue-700 rounded-md hover:bg-blue-600'>
+        <button className='px-3 py-2 text-white bg-blue-700 rounded-md hover:bg-blue-600'>
           Register Now
         </button>
       </div>

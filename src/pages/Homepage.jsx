@@ -52,7 +52,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <h1 className='text-xl font-bold text-center'>My Todo App</h1>
+      <h1 className='text-xl font-bold text-center'>My Task App</h1>
       <div className='w-[80%] mx-auto my-3'>
         <TodoForm handleSubmit={handleSubmit}
           setTitle={setTitle}

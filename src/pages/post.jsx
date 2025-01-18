@@ -35,12 +35,12 @@ const Post = () => {
         <div className="p-2 md:p-4 lg:p-8">
             <div className="flex flex-col justify-center space-y-5 weyn">
                 <div className="details">
-                    <h1 className="text-xl font-semibold text-blue-600">{post?.title}</h1>
+                    <h1 className="text-xl font-semibold text-blue-600"> <h2 className="text-xl font-bold text-blue-700 hover:underline hover:cursor-pointer">Post</h2>{post?.title}</h1>
                     <p className="font-mono">{post?.body}</p>
 
                 </div>
                 <div className="flex flex-col gap-3 comments">
-                    <h1 className="text-xl font-bold text-blue-700">Comments</h1>
+                    <h1 className="text-xl font-bold text-blue-700 hover:underline hover:cursor-pointer">Comments</h1>
                     {
                         postComment.map(el => (
                             <div className="p-2 bg-gray-200 rounded-md comment">
