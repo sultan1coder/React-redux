@@ -9,7 +9,7 @@ const initialState = {
       status: 'INPROGRESS'
     }
   ]
-};
+};j
 
 const todoSlice = createSlice({
   name: 'Todo slice',
